@@ -1,0 +1,407 @@
+/* =========================
+   MAIN
+========================= */
+
+.video-post{
+  max-width:700px;
+  margin:20px auto;
+
+  background:#111318;
+
+  color:#f1f1f1;
+
+  border:1px solid #24272e;
+
+  border-radius:12px;
+
+  overflow:hidden;
+
+  font-family:Arial,sans-serif;
+
+  box-shadow:0 5px 25px rgba(0,0,0,.35);
+}
+
+
+/* =========================
+   THUMBNAIL 16:9
+========================= */
+
+.thumb{
+  position:relative;
+
+  display:block;
+
+  width:100%;
+
+  aspect-ratio:16/9;
+
+  overflow:hidden;
+
+  background:#080808;
+
+  text-decoration:none;
+}
+
+.thumb img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.3s;
+}
+
+.thumb:hover img{
+  transform:scale(1.03);
+}
+
+
+/* =========================
+   PLAY BUTTON
+========================= */
+
+.play{
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  width:68px;
+  height:48px;
+
+  border-radius:11px;
+
+  background:#e50914;
+
+  color:#fff;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:22px;
+
+  box-shadow:0 4px 20px rgba(0,0,0,.7);
+
+  transition:.2s;
+}
+
+.thumb:hover .play{
+  transform:translate(-50%,-50%) scale(1.1);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.video-content{
+  padding:18px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.video-post h1{
+  font-size:24px;
+
+  line-height:1.4;
+
+  margin:0 0 8px;
+
+  color:#fff;
+}
+
+.video-post h1 i{
+  color:#ff3040;
+
+  margin-right:4px;
+}
+
+
+/* =========================
+   RATING
+========================= */
+
+.rating{
+  display:flex;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:5px;
+
+  font-size:14px;
+
+  color:#aaa;
+
+  margin-bottom:13px;
+}
+
+.stars{
+  color:#ffc107;
+
+  letter-spacing:1px;
+}
+
+.rating b{
+  color:#fff;
+}
+
+.rating .dot{
+  color:#555;
+
+  margin:0 5px;
+}
+
+.rating .fa-eye{
+  color:#888;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.desc{
+  color:#aaa;
+
+  font-size:14px;
+
+  line-height:1.6;
+
+  margin:8px 0 16px;
+}
+
+
+/* =========================
+   MAIN BUTTONS
+========================= */
+
+.main-buttons{
+  display:flex;
+
+  gap:10px;
+
+  margin:18px 0;
+}
+
+.main-buttons a{
+
+  flex:1;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:7px;
+
+  padding:13px 8px;
+
+  border-radius:7px;
+
+  text-decoration:none;
+
+  font-weight:bold;
+
+  font-size:14px;
+
+  transition:.2s;
+}
+
+.main-buttons a:hover{
+  transform:translateY(-1px);
+
+  filter:brightness(1.1);
+}
+
+.watch{
+  background:#e50914;
+
+  color:#fff!important;
+}
+
+.download{
+  background:#168a3a;
+
+  color:#fff!important;
+}
+
+
+/* =========================
+   OPTIONS TITLE
+========================= */
+
+.video-post h2{
+
+  font-size:19px;
+
+  margin:24px 0 12px;
+
+  color:#fff;
+}
+
+.video-post h2 i{
+  margin-right:5px;
+
+  color:#aaa;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.option{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:10px;
+
+  padding:12px;
+
+  margin:8px 0;
+
+  background:#191c22;
+
+  border:1px solid #292d35;
+
+  border-radius:8px;
+
+  color:#ddd;
+
+  font-size:14px;
+
+  transition:.2s;
+}
+
+.option:hover{
+  background:#20242b;
+
+  border-color:#383d47;
+}
+
+
+/* Left */
+
+.option span{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+}
+
+.option span i{
+
+  width:20px;
+
+  text-align:center;
+
+  color:#aaa;
+}
+
+
+/* Right button */
+
+.option a{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:5px;
+
+  background:#292d34;
+
+  color:#fff!important;
+
+  text-decoration:none;
+
+  padding:7px 12px;
+
+  border-radius:6px;
+
+  font-weight:bold;
+
+  white-space:nowrap;
+
+  transition:.2s;
+}
+
+.option a:hover{
+  background:#e50914;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:500px){
+
+  .video-post{
+    margin:12px 0;
+
+    border-radius:9px;
+  }
+
+  .video-content{
+    padding:14px;
+  }
+
+  .video-post h1{
+    font-size:20px;
+  }
+
+  .play{
+    width:58px;
+
+    height:42px;
+
+    font-size:19px;
+  }
+
+  .main-buttons{
+    gap:7px;
+  }
+
+  .main-buttons a{
+    padding:12px 5px;
+
+    font-size:12px;
+  }
+
+  .option{
+    padding:10px;
+
+    font-size:13px;
+  }
+
+  .option a{
+    padding:7px 9px;
+
+    font-size:11px;
+  }
+
+  .video-post h2{
+    font-size:17px;
+  }
+
+}
